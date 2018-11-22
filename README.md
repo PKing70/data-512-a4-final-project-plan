@@ -28,7 +28,7 @@ I expect that these questions and related ones will support traditions linear re
 
 ### Deliverables
 
-I expect to use [Python]() in a [Jupyter Notebook](http://jupyter.org/) to load and explore the data from some combination of the below data source options, to be able to investigate my hypotheses, perhaps develop different hypotheses, and report meaningful correlations between project variables and outcomes such as primary_focus_subject="Art" results in goal reach and funding rates. The deliverable should be one IPYNB file, its supporting data CSV files, and any PNG files corresponding to generated visualizations, in a [Github](https://github.com/) repository parallel to this one. 
+I expect to use [Python]() in a [Jupyter Notebook](http://jupyter.org/) to load and explore the data. I will use standard statistical anayses to investigate my research questions, perhaps develop new ideas, and report meaningful correlations between project variables and outcomes. For example, I should be able to find and plot which subject results in funding success, or whether the proposed cost of a project produces significantly different success rates. (Should a teacher create one project for all gaps in Art for $1000 or a collection of $200 asks, in order to reach the same financial end?) The deliverable should be one IPYNB file, its supporting data CSV files, and any PNG files corresponding to generated visualizations, in a [Github](https://github.com/) repository parallel to this one. 
 
 ## Data Sourcess
 
