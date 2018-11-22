@@ -96,7 +96,9 @@ Browne, Thomas. *Religio Medici : The Religion of a Doctor.* Sir Thomas Browne s
 
 DonorsChoose Data. "Download Data". Web. 21 November 2018 [<https://research.donorschoose.org/t/download-opendata>](https://research.donorschoose.org/t/download-opendata)
 
-Tyre, Peg. "Beyond School Supplies: How DonorsChoose is Crowdsourcing Real Education Reform." FastCompany 2 October 2014: n.
+Karp, Jonathan. "Want to Keep School Funding Alive? Put an End to DonorsChoose" *Mic* 11 July 2013: n-pag. Web. 21 November 2018 [<https://mic.com/articles/54021/want-to-keep-school-funding-alive-put-an-end-to-donorschoose>](https://mic.com/articles/54021/want-to-keep-school-funding-alive-put-an-end-to-donorschoose#.vCXQjvABc).
+
+Tyre, Peg. "Beyond School Supplies: How DonorsChoose is Crowdsourcing Real Education Reform." *FastCompany* 2 October 2014: n.
 pag. Web. 21 November 2018 [<https://www.fastcompany.com/3025597/donorschoose-hot-for-teachers>](https://www.fastcompany.com/3025597/donorschoose-hot-for-teachers).
 
 
