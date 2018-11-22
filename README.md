@@ -8,7 +8,7 @@ DATA 512
 
 20 November 2018
 
-## How to get Chosen by Donors
+## How Donors Choose
 
 [DonorsChoose](https:www.donorschoose.org) is a crowd-sourced nonprofit organization that provides a platform for teachers to request funding for classroom supplies and projects. Donors can then peruse the advertised projects on the site, to choose which causes to support based on information garnered from the page created for each plea by the teacher or class. These "attractor" pages are standardized, containing uniform components such as classroom data, category of project, essays or short-form paragraphs covering how the funds will be used, financial goals, a statuss bar tracking progress towards financial goal, and other components. DonorsChoose has made public many years of its project data, tracking these attributes and donation results over many years. My project will statistically analyze the DonorsChoose public datasets to identify factors that result in more (or less) effective project funding request pages. 
 
@@ -28,11 +28,11 @@ I expect that these questions and related ones will support traditions linear re
 
 ### Deliverables
 
-I expect to use Python in a Jupyter Notebook to load and explore the data from some combination of the below data soucr options, to be able to investigate my hypotheses, perhaps develop different hypotheses, and report meaningful correlations between project variables and outcomes such as primary_focus_subject="Art" results in goal reach and funding rates. The deliverable should be one .ipynb, its supporting data .csv files, and any .png files corresponding to generated visualizations, in a Github repository parallel to this one. 
+I expect to use [Python]() in a [Jupyter Notebook](http://jupyter.org/) to load and explore the data from some combination of the below data soucr options, to be able to investigate my hypotheses, perhaps develop different hypotheses, and report meaningful correlations between project variables and outcomes such as primary_focus_subject="Art" results in goal reach and funding rates. The deliverable should be one .ipynb, its supporting data .csv files, and any .png files corresponding to generated visualizations, in a [Github](https://github.com/) repository parallel to this one. 
 
 ## Data Sourcess
 
-DonorsChoose has made thirteen years of its data open and publicly accessible for analysis. The data includes information that I have downloaded and begun analysis on:
+DonorsChoose has made [thirteen years of its data](https://data.donorschoose.org/docs/overview/) open and publicly accessible for analysis. The data includes information that I have downloaded and begun analysis on:
 
 * Projects (including classroom projects that have been posted, school information such as government-issued NCES ID, lat/long, and city/state/zip)
 * Donations (including donation amounts, donor city, state)
@@ -40,11 +40,11 @@ DonorsChoose has made thirteen years of its data open and publicly accessible fo
 * Project essays (including the full text of the teacher-written requests accompanying all classroom projects)
 * Giving pages (number of teachers, students, amount raised)
 
-and more, such as gift card data which I do not intend to use.
+and more, such as gift card data, which I do not intend to use in my analysis.
 
 ### Option 1: Raw data
 
-Guidelines are provided to access the full set of all their available data in CSV form at the DC [OpenData Layout and Docs page](https://research.donorschoose.org/t/opedata-layout-and-docs/18). 
+Guidelines are provided to access the full set of all their available data in CSV form at the DC [OpenData Layout and Docs page](https://research.donorschoose.org/t/opedata-layout-and-docs/18). The fields and schema of each data file is explicted there, including DonorsChoose-specific advice for interpretting the data and correcting for anomolies such as "A few years back, donor addresses became optional, even when the donor is eligible to receive a mailed thank-you packet from the classroom. So there are a lot of null address fields for donors who elected not to provide their address."
 
 According to the documentation, "the data is compressed, quoted, escaped and without a header. To properly import, use Python's pandas using code in 'How to read this CSV file' under each button. No need to decompress files." Each data file comes in a compressed .GZ archive, which I've extracted using WinZip for Windows.
 
@@ -66,11 +66,32 @@ The DonorsChoose data site provides extensive documentation for the schemas of t
 
 ![schema](donorschoose.png)
 
-I expect to join and filter Projects, Donations and Resources to investig
+I expect to join and filter Projects, Donations and Resources to investigate my research questions. Since I'm not familiar with PostGre SQL this might end up being technically difficult, in which case I might fall back to option 2.
 
 ### Option 2: Pre-selected data
 
-However, I might not tackle such SQL work to perform my analysis. Alternately, the datasets have already been decompressed, joined, and filtered into significant subsets to produce Looker visualizations. Therefore, depending upon the direction of my exploration, I might choose to download these more focused CSV files instead of the raw data discussed above.
+The datasets have already been decompressed, joined, and filtered into significant subsets to produce Looker visualizations. Anyone can sign in to the DonorsChoose [exploration page](https://data.donorschoose.org/explore-our-impact/) to interact with the tools and visulazations there to answer many questions without coding. (Log in with email opendata@donorschoose.org and password teachersrock1.) 
+
+Using the UI, one can filter on criteria such as location, subject, and other fields. Then, choose to download the pre-joined and filted data as a zip archive of CSV files, all pre-joined, with headers, and likely easier to process. For example, obtaining the data source for the Community Impact dashboard returns a zip archive named dashboard-donorschoose_org_community_impact_dashboard. Inside are a collections of CSV files tracking projects, dollars_raised, and so on. Depending upon the direction of my exploration, I might choose to download these more focused CSV files instead of the raw data discussed above, if I can filter them to produce the datasets I want to see. However, these dashboards are not based on all the DonorsChoose public data, rather only subsets that correspond to the visualizations they've pre-defined.
+
+Schema of sample ashboardonorschoose_org_community_impact_dashboard all_projects.csv, with all data types as text:
+
+|Column|Description|
+|---|---|
+|Teacher Name|Specified by giving page creator|
+|School Name|Facility where project is located|
+|Project Title|Descriptive name|
+|Project Total Price|Estimated cost including optional support costs|
+|Project Url|Giving page identifier from DonorsChoose site|
+|Project Subject|Academic area of project|
+|Project Grade Level|Age level of students|
+|School State|Two-letter postal code|
+|School County|Full location name|
+|School City|Full location name|
+|School District|Full district title of school|
+|Project Completed Date|If not closed as unfunded|
+
+If the pre-defined datasets are too limited, but the full open data is too unwieldy or complex for me to analyze, I am also considering obtaining specific data using DonorsChoose API.
 
 ### Option 3: API data
 
@@ -100,29 +121,3 @@ Karp, Jonathan. "Want to Keep School Funding Alive? Put an End to DonorsChoose" 
 
 Tyre, Peg. "Beyond School Supplies: How DonorsChoose is Crowdsourcing Real Education Reform." *FastCompany* 2 October 2014: n.
 pag. Web. 21 November 2018 [<https://www.fastcompany.com/3025597/donorschoose-hot-for-teachers>](https://www.fastcompany.com/3025597/donorschoose-hot-for-teachers).
-
-
-
-●Are there any unknowns or dependencies that might affect your ability to complete this project? 
-
-●How do human-centered design considerations inform... a.your decision to pursue this projectb.your approach to performing the work?
-
-What type of data and analysis?
-
-Talking about genderMany projects are centred on gender as a variable. Since the assignment requires you to think about ethics, consider what ‘gender’ is:
-
-●Not the same as sex (‘man’, ‘woman’ not ‘male’, ‘female’)
-
-●Not a binary (people have identities other than ‘man’ or ‘woman’)
-
-●Not impermeable (people transition between genders)
-
-●Something that creates myriad different experiences of life that are likely to be reflected in your data.
-
-Talking about genderQuestions to ask:
-
-●Does your data only contain binary options? If so, note that as a limitation - and note why it is a limitation (it excludes people outside that binary).
-
-●Does your data include trans people? If so, incorporate that into the gender research. If not, highlight that as a limitation
-
-
