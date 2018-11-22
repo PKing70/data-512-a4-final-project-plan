@@ -42,7 +42,7 @@ DonorsChoose has made [thirteen years of its data](https://data.donorschoose.org
 
 and more, such as gift card data, which I do not intend to use in my analysis.
 
-### Option 1: Raw data
+### Option 1: Raw Data
 
 Guidelines are provided to access the full set of all their available data in CSV form at the DC [OpenData Layout and Docs page](https://research.donorschoose.org/t/opedata-layout-and-docs/18). The fields and schema of each data file is explicted there, including DonorsChoose-specific advice for interpretting the data and correcting for anomolies such as "A few years back, donor addresses became optional, even when the donor is eligible to receive a mailed thank-you packet from the classroom. So there are a lot of null address fields for donors who elected not to provide their address."
 
@@ -68,7 +68,7 @@ The DonorsChoose data site provides extensive documentation for the schemas of t
 
 I expect to join and filter Projects, Donations and Resources to investigate my research questions. Since I'm not familiar with PostGre SQL this might end up being technically difficult, in which case I might fall back to option 2.
 
-### Option 2: Pre-selected data
+### Option 2: Filtered Data
 
 The datasets have already been decompressed, joined, and filtered into significant subsets to produce Looker visualizations. Anyone can sign in to the DonorsChoose [exploration page](https://data.donorschoose.org/explore-our-impact/) to interact with the tools and visulazations there to answer many questions without coding. (Log in with email opendata@donorschoose.org and password teachersrock1.) 
 
@@ -93,9 +93,19 @@ Schema of sample ashboardonorschoose_org_community_impact_dashboard all_projects
 
 If the pre-defined datasets are too limited, but the full open data is too unwieldy or complex for me to analyze, I am also considering obtaining specific data using DonorsChoose API.
 
-### Option 3: API data
+### Option 3: API Data
 
-DonorsChoose also makes its data available through a REST API.
+DonorsChoose also makes its data available through a REST API with multiple endpoints:
+
+* Donors: [<https://api.donorschoose.org/common/json-donor.html>](https://api.donorschoose.org/common/json-donor.html)
+* Teachers: [<https://api.donorschoose.org/common/json-teacher.html>](https://api.donorschoose.org/common/json-teacher.html)
+* Schools: [<https://api.donorschoose.org/common/json-school.html>](https://api.donorschoose.org/common/json-school.html)
+
+Also, DonorsChoose provides additional APIs for partner pages to track their specific apps and interactions with DonorsChoose, and a transactions API with which one could make a donation to a project.
+
+I could use these APIs to return JSON data subsets to investigate my research questions or supplement data if I find the Looker pre-filtered datasets too limited or scoped, or the raw datasets too tricky to manipulate. However, at this time I plan to try to perform my analyses by successfully loading the raw data into Python using Pandas as recommended in Option 1, and processing it from there.
+
+While all data is in text/CSV format, I expect to find anomolies in the data as guided by the DonorsChoose documentation, since they acknowledge that over the years they have modified the type of information they collect for each project. I expect some data to be incomplete and not always availalble.
 
 ## License Information
 
@@ -103,7 +113,7 @@ This DonorsChoose data is licensed under a Creative Commons Attribution-NonComme
 
 ## Additional Human Centered Data Science Considerations
 
-Crowdfunding education is positioned by DonorsChoose founder Charles Best as a solution to tensions and financial strains teachers and budget directors conflict over: "We aren’t advocating for or against any program. We are going to create a platform that says very explicitly what it is that teachers experience in their classrooms. And donors from either side of the debate–or any part of the political spectrum–can decide whether they want to fund it or agitate to change the underlying conditions that created it.” Others, however, consider the "crowdfunding for schools" movement contrary to the "democratization" of decision making. Jeffrey Henig, a professor of political science and education at Teachers College, Columbia University, instead thinks “We have vested school boards, superintendents or mayors’ offices with authority to make decisions about schooling because we understand they will be made out in the open, where questions of conflicting values are negotiated and compromises are made...It will be a collective process embedded with democratic procedures and discussion.” Henig thinks sidstepping these democratic processes damage the groups DonorsChoose wants to help (FastCompany). Yet others opine that that DonorsChoose de-incentivizes school districts and administrations from adequately funding classes, and the right approach is to dial back crowdfunding support to apply pressure to school administrators: ""
+Crowdfunding education is positioned by DonorsChoose founder Charles Best as a solution to tensions and financial strains teachers and budget directors conflict over: "We aren’t advocating for or against any program. We are going to create a platform that says very explicitly what it is that teachers experience in their classrooms. And donors from either side of the debate–or any part of the political spectrum–can decide whether they want to fund it or agitate to change the underlying conditions that created it.” Others, however, consider the "crowdfunding for schools" movement contrary to the "democratization" of decision making. Jeffrey Henig, a professor of political science and education at Teachers College, Columbia University, instead thinks “We have vested school boards, superintendents or mayors’ offices with authority to make decisions about schooling because we understand they will be made out in the open, where questions of conflicting values are negotiated and compromises are made...It will be a collective process embedded with democratic procedures and discussion.” Henig thinks sidstepping these democratic processes damage the groups DonorsChoose wants to help (Tyre). Yet others opine that that DonorsChoose de-incentivizes school districts and administrations from adequately funding classes, and the right approach is to dial back crowdfunding support to apply pressure to school administrators: "this is a reactive, piecemeal approach that can’t ever hope to fully address the needs of students, especially those in traditionally under-resourced schools. When successful, it also has the pernicious effect of convincing those controlling the purse-strings that traditional funding is unnecessary, leading to budget outlays that don’t allocate for buses, or paper, or computers on the tentative promise that Doreen from Atlanta, or James from Brooklyn will pay for it instead." (Karp)
 
 Clearly, there will be some meaningful information to garner from the DonorsChoose data. Similar efforts specific to Donor Retention have already been studied (Althoff and Leskvec), but I know of and found no references to analyses of project traits or giving page metadata about donation attraction or success rates at reaching targets/completing goals.  
   
