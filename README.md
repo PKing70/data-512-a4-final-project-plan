@@ -1,17 +1,34 @@
 # Assignment 4: Final project plan
+
 Patrick King
+
 Professor Morgan
+
 DATA 512
+
 20 November 2018
 
 ## How to get Chosen by Donors
-DonorsChoose is a crowd-sourced nonprofit providing a platform for teachers to request funding from the public for classroom supplies and projects. My project will statistically analyze the DonorsChoose public datasets to try to identify factors that produce more effective project funding requests. I want to do this project to learn how teachers could discover from prior funding efforts, in order to improve the chances or rates of attracting classroom project donations and retain donor participation across multiple projects. I think DonorsChoose is an interesting approach to crowdfunding education expenses for a population (teachers) that often must use their personal funds to equip their classrooms or enable their students to participate in certain learning experiences. However, many teachers might not know how to analyze the public DonorsChoose data to find trends for successful funding campaigns, so any tips, tricks, insights or "secrets" might be valuable to document and share. First, I intend to share anything I learn with my wife who often must fund her ideas and classrooms from our savings, usually without reimbersement, so my intentions are in no way purely altuistic, but also quite self-serving.
+
+[DonorsChoose](https:www.donorschoose.org) is a crowd-sourced nonprofit organization that provides a platform for teachers to request funding for classroom supplies and projects. Donors can then peruse the advertised projects on the site, to choose which causes to support based on information garnered from the page created for each plea by the teacher or class. These "attractor" pages are standardized, containing uniform components such as classroom data, category of project, essays or short-form paragraphs covering how the funds will be used, financial goals, a statuss bar tracking progress towards financial goal, and other components. DonorsChoose has made public many years of its project data, tracking these attributes and donation results over many years. My project will statistically analyze the DonorsChoose public datasets to identify factors that result in more (or less) effective project funding request pages. 
+
+I want to do this project to learn how teachers could imrove the effectiveness of their crowdfunding efforts. I hope that trends and correlations can be shown that might help teachers attract more donations by creating their funding pages using the options and tactics that have roven to achieve funding completion or higher rates of donation. I could share this information to teaching communities or discussion groups for feedback, which might help others better use crowdfunding through DonorsChoose to meet their classroom expense needs. 
+
+The DonorsChoose approach to funding education expenses is a valuable alternative for teachers who often must use personal funds to equip their classrooms or to enable novel learning experiences. Helping teachers understand the effectiveness or shortcomings of various options in setting up, describing, and categorizing their projects might increase the rates of donation, or perhaps it might produce a "zero-sum" result where some teachers become more capable at attracting donations, essentially at the expense of the other teachers using less effective project designs. Finally, my motivations are not purely altruistic as first, I intend to share my analysis with my underfunded high school-teaching wife who often funds her ideas and classrooms from our savings, typically without reimbersement from her school district. "Charity begins at home." -- Sir Thomas Browne, Religio Medici, 1642
+
+Hypotheses
+
+1. 
+2.
+3.
 
 
+Data
 
-Why are you planning to do this analysis? 
+Licenses
 
-Provide background information about the topic, research questions/hypotheses, (imagined) business goals, and anything else that will be required to properly contextualize your study.
+References
+
 
 ●What is your plan? Describe and link to the data sources will you collect, how data will be collected and processed, the analysis you intend to perform, and the outcomes and deliverables you anticipate. 
 
@@ -78,3 +95,7 @@ Talking about genderQuestions to ask:
 ●Does your data only contain binary options? If so, note that as a limitation - and note why it is a limitation (it excludes people outside that binary).
 
 ●Does your data include trans people? If so, incorporate that into the gender research. If not, highlight that as a limitation
+which includes details such as type of project, lists of items to purchase, a progress-towards-goal tracking barMy project will statistically analyze the DonorsChoose public datasets to try to identify factors that produce more effective project funding requests. I want to do this project to learn how teachers could discover from prior funding efforts, in order to improve the chances or rates of attracting classroom project donations and retain donor participation across multiple projects. I think DonorsChoose is an interesting approach to crowdfunding education expenses for a population (teachers) that often must use their personal funds to equip their classrooms or enable their students to participate in certain learning experiences. However, many teachers might not know how to analyze the public DonorsChoose data to find trends for successful funding campaigns, so any tips, tricks, insights or "secrets" might be valuable to document and share. First, I intend to share anything I learn with my wife who often must fund her ideas and classrooms from our savings, usually without reimbersement, so my intentions are in no way purely altuistic, but also quite self-serving.
+
+
+
