@@ -5,7 +5,9 @@ DATA 512
 20 November 2018
 
 ## How to get Chosen by Donors
-DonorsChoose is good.
+DonorsChoose is a crowd-sourced nonprofit providing a platform for teachers to request funding from the public for classroom supplies and projects. My project will statistically analyze the DonorsChoose public datasets to try to identify factors that produce more effective project funding requests. I want to do this project to learn how teachers could discover from prior funding efforts, in order to improve the chances or rates of attracting classroom project donations and retain donor participation across multiple projects. I think DonorsChoose is an interesting approach to crowdfunding education expenses for a population (teachers) that often must use their personal funds to equip their classrooms or enable their students to participate in certain learning experiences. However, many teachers might not know how to analyze the public DonorsChoose data to find trends for successful funding campaigns, so any tips, tricks, insights or "secrets" might be valuable to document and share. First, I intend to share anything I learn with my wife who often must fund her ideas and classrooms from our savings, usually without reimbersement, so my intentions are in no way purely altuistic, but also quite self-serving.
+
+
 
 Why are you planning to do this analysis? 
 
