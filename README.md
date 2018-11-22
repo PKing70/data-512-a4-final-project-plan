@@ -16,14 +16,21 @@ I want to do this project to learn how teachers could imrove the effectiveness o
 
 The DonorsChoose approach to funding education expenses is a valuable alternative for teachers who often must use personal funds to equip their classrooms or to enable novel learning experiences. Helping teachers understand the effectiveness or shortcomings of various options in setting up, describing, and categorizing their projects might increase the rates of donation, or perhaps it might produce a "zero-sum" result where some teachers become more capable at attracting donations, essentially at the expense of the other teachers using less effective project designs. Finally, my motivations are not purely altruistic as first, I intend to share my analysis with my underfunded high school-teaching wife who often funds her ideas and classrooms from our savings, typically without reimbersement from her school district. "Charity begins at home..." (Browne, 141).
 
-## Hypotheses
+## Research Questions and Analysis
 
-1. 
-2.
-3.
+I intend to explore the data to find correlations (or lack thereof) in areas such as:
 
+1. Do specific project types garner more funding than others?
+2. Do specific class locations garner more funding than others?
+3. Do specific giving page traits (such as "Thank you notes sent") garner more funding than others?
 
-## Data Analysis
+I expect that these questions and related ones will support traditions linear regression modelling and plotting, where I hope to be able to identify variables that have shown to be particularly successful or unsuccessful at attracting donations to projects. For example, given that a giving page must use pre-defined categories for primary_focus_subject (e.g. "Environmental Science"), some subjects might be better-funded than others. Perhaps certain donor regions (such as the Seattle area or San Francisco area) might support particular subjects ("Computer Science"), while others regions (such as Iowa from which I write this project plan) might better support different subjects ("Agricultural Science").
+
+### Deliverables
+
+I expect to use Python in a Jupyter Notebook to load and explore the data from some combination of the below data soucr options, to be able to investigate my hypotheses, perhaps develop different hypotheses, and report meaningful correlations between project variables and outcomes such as primary_focus_subject="Art" results in goal reach and funding rates. The deliverable should be one .ipynb, its supporting data .csv files, and any .png files corresponding to generated visualizations, in a Github repository parallel to this one. 
+
+## Data Sourcess
 
 DonorsChoose has made thirteen years of its data open and publicly accessible for analysis. The data includes information that I have downloaded and begun analysis on:
 
@@ -33,15 +40,15 @@ DonorsChoose has made thirteen years of its data open and publicly accessible fo
 * Project essays (including the full text of the teacher-written requests accompanying all classroom projects)
 * Giving pages (number of teachers, students, amount raised)
 
-and more, such as giftcard data which I do not intend to use.
+and more, such as gift card data which I do not intend to use.
 
 ### Option 1: Raw data
 
-Guidelines are provided to access the full set of all their available data in CSV form at <>. 
+Guidelines are provided to access the full set of all their available data in CSV form at the DC [OpenData Layout and Docs page](https://research.donorschoose.org/t/opedata-layout-and-docs/18). 
 
 According to the documentation, "the data is compressed, quoted, escaped and without a header. To properly import, use Python's pandas using code in 'How to read this CSV file' under each button. No need to decompress files." Each data file comes in a compressed .GZ archive, which I've extracted using WinZip for Windows.
 
-To import the project data into Python pandas 235, for example:
+To import the project data into Python pandas 235, for example, I should execute this command:
 
 ```python
 projects = pandas.read_csv('opendata_projects000.gz', escapechar='\\', names=['_projectid', '_teacher_acctid', 
@@ -55,9 +62,11 @@ projects = pandas.read_csv('opendata_projects000.gz', escapechar='\\', names=['_
 'eligible_double_your_impact_match', 'eligible_almost_home_match', 'funding_status', 'date_posted', 'date_completed', 'date_thank_you_packet_mailed', 'date_expiration'])
 ```
 
-The DonorsChoose data site provides extensive documentation for joining their data using PostGre SQL, according to this schema/ER diagram:
+The DonorsChoose data site provides extensive documentation for the schemas of theses tables and guidelines for joining them as needed using PostGre SQL, according to this schema/ER diagram:
 
-image
+![schema](donorschoose.png)
+
+I expect to join and filter Projects, Donations and Resources to investig
 
 ### Option 2: Pre-selected data
 
@@ -65,77 +74,36 @@ However, I might not tackle such SQL work to perform my analysis. Alternately, t
 
 ### Option 3: API data
 
-
+DonorsChoose also makes its data available through a REST API.
 
 ## License Information
 
-## Human Centered Data Science Considerations
+This DonorsChoose data is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License ([CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/us/)). It is available for non-commercial use, and they provide these guidelines for commercial use: "If you'd like to use this data for commercial purposes, get in touch with us and tell us a bit about your plans. Our strong preference is to greenlight your commercial application with no licensing fees, and we have never charged for access to our API or data. We just need to make sure that the application won't run contrary to our org's mission, abuse the rich content that our teachers have created, etc" (DonorsChoose Data, Download Opendata License section).
+
+## Additional Human Centered Data Science Considerations
 
 Crowdfunding education is positioned by DonorsChoose founder <name> as a solution. However, others consider it contrary to the democratization of decision making. (fast company). Others have concerns that DonorsChoose de-incentivizes school districts and administrations from adequately funding their schools.
   
 Whether it is ultimately worthwh
   
-
-
 ## Works Cited
 
 Althoff, Tim and Leskovec, Jure. "Donor Retention in Online Crowdfunding Communities: A Case Study of DonorsChoose.org." *ACM International Conference on World Wide Web (WWW)* 2015 [<https://cs.stanford.edu/people/jure/pubs/donors-www15.pdf>](https://cs.stanford.edu/people/jure/pubs/donors-www15.pdf).
 
 Browne, Thomas. *Religio Medici : The Religion of a Doctor.* Sir Thomas Browne site: University of Chicago. Web. 21 November 2018 [<http://penelope.uchicago.edu/relmed/relmed1645.pdf>](http://penelope.uchicago.edu/relmed/relmed1645.pdf).
 
+DonorsChoose Data. "Download Data". Web. 21 November 2018 [<https://research.donorschoose.org/t/download-opendata>](https://research.donorschoose.org/t/download-opendata)
+
 Tyre, Peg. "Beyond School Supplies: How DonorsChoose is Crowdsourcing Real Education Reform." FastCompany 2 October 2014: n.
 pag. Web. 21 November 2018 [<https://www.fastcompany.com/3025597/donorschoose-hot-for-teachers>](https://www.fastcompany.com/3025597/donorschoose-hot-for-teachers).
 
 
-●What is your plan? Describe and link to the data sources will you collect, how data will be collected and processed, the analysis you intend to perform, and the outcomes and deliverables you anticipate. 
 
 ●Are there any unknowns or dependencies that might affect your ability to complete this project? 
 
 ●How do human-centered design considerations inform... a.your decision to pursue this projectb.your approach to performing the work?
 
 What type of data and analysis?
-
-●Must use publicly-available and appropriately licensed dataset(s)
-
-●Can be a ‘classic’ statistical analysis, or the design and/or evaluation of a machine learning model
-
-●Use your own definition of ‘big data’
-
-●Choose datasets and analyses that are likely to support reproducibility
-
-●Choose datasets and methods that let you answer questions that you find interesting and important
-
-●Visualizations aren’t necessary, but encouraged as an effective way of communicating your findings
-
-You can only use a dataset for your project if the license or terms of use allow you to collect the data, analyze it, and re-publish it publicly.
-
-●Some licenses and terms of use specifically prohibit that. 
-
-●Some TOU say it’s okay for non-commercial purposes (like academic research). 
-
-●Some data sources don’t specify a license or terms of use for their data (hint: avoid these).
-
-How to document your data
-
-When your dataset has an explicit license
-
-1.State the license of your data (e.g. “CC-By-SA 4.0”) in your report.
-
-2.When possible, link to the license deed, e.g. https://creativecommons.org/licenses/by-sa/4.0/
-
-When data re-use is covered under the provider’s Terms of Use1.Quote the relevant section of the terms of use in your report2.Link to the terms of use pageIf possible, link to the original source of the data, which may be different from where you found it. 
-
-●E.g. MovieLens data on the GroupLens website vs. MovieLens data on Kaggle
-
-Be careful with Kaggle data
-
-Many of those datasets are not explicitly licensed. If you cannot find appropriate license information for the data, you cannot use it. You’ll fail the assignment, even if the rest of your work is really good. :/Many of those datasets have already been analyzed by other Kagglers. Many of those analyses are public on Kaggle.com. 
-
-●Your analysis should not simply duplicate analysis that Kagglers have already done on this dataset (e.g. “do more data scientists use Python or R?”).
-
-●It’s perfectly fine to build off of the analysis that others have done, just make sure you cite the original analysis. 
-
-●Tip: Avoid even looking like you might be plagiarizing someone else’s analysis. 
 
 Talking about genderMany projects are centred on gender as a variable. Since the assignment requires you to think about ethics, consider what ‘gender’ is:
 
