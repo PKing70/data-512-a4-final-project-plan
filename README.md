@@ -70,7 +70,7 @@ I expect to join and filter Projects, Donations and Resources to investigate my 
 
 ### Option 2: Filtered Data
 
-The datasets have already been decompressed, joined, and filtered into significant subsets to produce Looker visualizations. Anyone can sign in to the DonorsChoose [exploration page](https://data.donorschoose.org/explore-our-impact/) to interact with the tools and visulazations there to answer many questions without coding. (Log in with email opendata@donorschoose.org and password teachersrock1.) 
+The datasets have already been decompressed, joined, and filtered into significant subsets to produce [Looker](https://looker.com/) visualizations. Anyone can sign in to the DonorsChoose [exploration page](https://data.donorschoose.org/explore-our-impact/) to interact with the tools and visulazations there to answer many questions without coding. (Log in with email opendata@donorschoose.org and password teachersrock1.) 
 
 Using the UI, one can filter on criteria such as location, subject, and other fields. Then, choose to download the pre-joined and filted data as a zip archive of CSV files, all pre-joined, with headers, and likely easier to process. For example, obtaining the data source for the Community Impact dashboard returns a zip archive named dashboard-donorschoose_org_community_impact_dashboard. Inside are a collections of CSV files tracking projects, dollars_raised, and so on. Depending upon the direction of my exploration, I might choose to download these more focused CSV files instead of the raw data discussed above, if I can filter them to produce the datasets I want to see. However, these dashboards are not based on all the DonorsChoose public data, rather only subsets that correspond to the visualizations they've pre-defined.
 
