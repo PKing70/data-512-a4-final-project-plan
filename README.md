@@ -101,7 +101,7 @@ DonorsChoose also makes its data available through a REST API with multiple endp
 * Teachers: [<https://api.donorschoose.org/common/json-teacher.html>](https://api.donorschoose.org/common/json-teacher.html)
 * Schools: [<https://api.donorschoose.org/common/json-school.html>](https://api.donorschoose.org/common/json-school.html)
 
-Also, DonorsChoose provides additional APIs for partner pages to track their specific apps and interactions with DonorsChoose, and a transactions API with which one could make a donation to a project.
+Also, DonorsChoose provides additional APIs for partners produce partner apps with DonorsChoose, including a transactions API with which to make donations to projects. However, these API don't seem likely to return data meaningful to my research questions.
 
 I could use these APIs to return JSON data subsets to investigate my research questions or supplement data if I find the Looker pre-filtered datasets too limited or scoped, or the raw datasets too tricky to manipulate. However, at this time I plan to try to perform my analyses by successfully loading the raw data into Python using Pandas as recommended in option 1, and processing it from there.
 
